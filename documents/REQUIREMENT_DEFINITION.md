@@ -72,7 +72,7 @@
   - コード品質: GitHub Actions CI を使用し、GitHub へプッシュ時に自動的に発火する。
   - 自動テスト: GitHub Actions CI を使用し、main ブランチにマージされた際に自動的に発火する。
 - 運用性
-  デプロイ: GitHub Actions CD を使用してデプロイする。
+  - デプロイ: GitHub Actions CD を使用してデプロイする。
 - セキュリティ
   - パスワードのハッシュ化を実施します。
   - HTTPS による通信の暗号化を確保します。
