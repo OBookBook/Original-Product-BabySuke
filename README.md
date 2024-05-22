@@ -21,5 +21,5 @@
 
 ## インフラ構成図
 <p align="center">
-  <img src="./documents/assets/INFLA_Design.png" width="1000">
+  <img src="./documents/assets/DESIGN_INFLA.png" width="1000">
 </p>
