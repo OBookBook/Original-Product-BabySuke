@@ -46,7 +46,7 @@
 | dislike       | VARCHAR(255) | NOT NULL                              | 嫌いなもの    |
 | registered_at | TIMESTAMP    | DEFAULT CURRENT_TIMESTAMP             | 登録日時      |
 
-## child_daily_records : 毎日育児記録テーブル
+## child_daily_r : 毎日育児記録テーブル
 
 | 列名                       | データ型     | 制約                                  | 説明                                                                     |
 | -------------------------- | ------------ | ------------------------------------- | ------------------------------------------------------------------------ |
@@ -74,8 +74,8 @@
 
 ## ai_daily_report_comments : AI 日報コメントテーブル
 
-| 列名            | データ型 | 制約                                    | 説明        |
-| --------------- | -------- | --------------------------------------- | ----------- |
-| 🔑id            | BIGINT   | PRIMARY KEY、AUTO_INCREMENT             | レポート ID |
+| 列名                    | データ型 | 制約                                            | 説明        |
+| ----------------------- | -------- | ----------------------------------------------- | ----------- |
+| 🔑id                    | BIGINT   | PRIMARY KEY、AUTO_INCREMENT                     | レポート ID |
 | 🔗child_daily_record_id | BIGINT   | FOREIGN KEY (child_daily_records.id)、 NOT NULL | 記録 ID     |
-| comment         | TEXT     | NULL                                    | AI コメント |
+| comment                 | TEXT     | NULL                                            | AI コメント |
