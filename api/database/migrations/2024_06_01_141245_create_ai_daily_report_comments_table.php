@@ -12,8 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('ai_daily_report_comments', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->bigInteger('child_daily_record_id')->unsigned();
+            $table->text('comment')->nullable();
             $table->timestamps();
+            
+            $table->foreign('child_daily_record_id')->references('id')->on('child_daily_records')->onDelete('cascade');
         });
     }
 
