@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\FamilyGroup;
 
 class FamilyGroupSeeder extends Seeder
 {
@@ -12,6 +13,6 @@ class FamilyGroupSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        FamilyGroup::factory()->count(30)->create();
     }
 }
