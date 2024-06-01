@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('childrens', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 255);
+            $table->char('gender', 1);
+            $table->date('birth_date');
+            $table->string('icon_image', 255)->nullable();
             $table->timestamps();
         });
     }
