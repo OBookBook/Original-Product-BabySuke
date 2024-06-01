@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\ChildSymptom;
 
 class ChildSymptomSeeder extends Seeder
 {
@@ -12,6 +13,6 @@ class ChildSymptomSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        ChildSymptom::factory(30)->create();
     }
 }

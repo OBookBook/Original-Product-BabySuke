@@ -27,5 +27,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ChildrenLikeSeeder::class);
         $this->call(ChildrenDislikeSeeder::class);
         $this->call(ChildDailyRecordSeeder::class);
+        $this->call(ChildSymptomSeeder::class);
     }
 }
