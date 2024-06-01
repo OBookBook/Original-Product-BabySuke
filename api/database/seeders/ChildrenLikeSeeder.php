@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\ChildrenLike;
 
 class ChildrenLikeSeeder extends Seeder
 {
@@ -12,6 +13,6 @@ class ChildrenLikeSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        ChildrenLike::factory()->count(30)->create();
     }
 }
