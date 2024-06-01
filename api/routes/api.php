@@ -10,7 +10,12 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 
 // http://localhost:8080/api
 Route::get('/', function () {
-    return ['Laravel' => app()->version()];
+    return [
+        'Laravel-Version' => app()->version(),
+        'message' => 'Hello, World!',
+        'status' => 'OK',
+        'timestamp' => now()
+    ];
 });
 
 require __DIR__ . '/auth.php';
