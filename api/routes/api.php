@@ -3,11 +3,12 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ChildrenController;
 
-Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
-    // 認証されたユーザーの情報を取得
-    return $request->user();
-});
+// Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
+//     // 認証されたユーザーの情報を取得
+//     return $request->user();
+// });
 
 // http://localhost:8080/api
 Route::get('/', function () {
@@ -20,5 +21,7 @@ Route::get('/', function () {
         'timestamp' => now()
     ];
 });
+
+Route::resource('children', ChildrenController::class);
 
 require __DIR__ . '/auth.php';
