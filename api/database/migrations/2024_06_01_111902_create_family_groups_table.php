@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('family_groups', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('child_id')->unsigned();
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('child_id')->references('id')->on('childrens')->onDelete('cascade');
         });
     }
 
