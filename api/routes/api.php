@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     // 認証されたユーザーの情報を取得
@@ -11,6 +12,8 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 // http://localhost:8080/api
 Route::get('/', function () {
     return [
+        'Auth::user()' => Auth::user(),
+        'Auth::id()' => Auth::id(),
         'Laravel-Version' => app()->version(),
         'message' => 'Hello, World!',
         'status' => 'OK',
