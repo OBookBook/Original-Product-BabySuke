@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('child_symptoms', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('record_id')->unsigned();
+            $table->tinyInteger('symptom')->nullable();
             $table->timestamps();
+
+            $table->foreign('record_id')->references('id')->on('child_daily_records')->onDelete('cascade');
         });
     }
 
