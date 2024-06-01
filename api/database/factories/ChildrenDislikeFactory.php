@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Children;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\ChildrenDislike>
@@ -17,7 +18,8 @@ class ChildrenDislikeFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'child_id' => Children::inRandomOrder()->first()->id,
+            'dislike' => $this->faker->word,
         ];
     }
 }

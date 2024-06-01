@@ -25,5 +25,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ChildrenSeeder::class);
         $this->call(FamilyGroupSeeder::class);
         $this->call(ChildrenLikeSeeder::class);
+        $this->call(ChildrenDislikeSeeder::class);
     }
 }
