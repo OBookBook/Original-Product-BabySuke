@@ -12,8 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('children_dislikes', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->bigInteger('child_id')->unsigned();
+            $table->string('dislike', 255);
             $table->timestamps();
+
+            $table->foreign('child_id')->references('id')->on('childrens')->onDelete('cascade');
         });
     }
 
