@@ -22,7 +22,6 @@
 | 列名       | データ型     | 制約                              | 説明                    |
 | ---------- | ------------ | --------------------------------- | ----------------------- |
 | 🔑id       | BIGINT       | PRIMARY KEY、AUTO_INCREMENT       | 子供 ID                 |
-| 🔗user_id  | BIGINT       | FOREIGN KEY (users.id)、 NOT NULL | ユーザー ID             |
 | name       | VARCHAR(255) | NOT NULL                          | 子供の名前              |
 | gender     | CHAR(1)      | NOT NULL                          | 性別 (M: 男性, F: 女性) |
 | birth_date | DATE         | NOT NULL                          | 生年月日                |
