@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class ChildrenLike extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['child_id', 'like'];
+
+    public function child()
+    {
+        return $this->belongsTo(Children::class, 'child_id');
+    }
 }
