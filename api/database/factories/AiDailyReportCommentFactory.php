@@ -19,7 +19,7 @@ class AiDailyReportCommentFactory extends Factory
     {
         return [
             'child_daily_record_id' => ChildDailyRecord::inRandomOrder()->first()->id,
-            'comment' => $this->faker->numberBetween(1, 5),
+            'comment' => $this->faker->word,
         ];
     }
 }
